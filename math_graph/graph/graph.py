@@ -33,8 +33,6 @@ def get_longest_path_length(graph, edges):
 
 def make_math_guideline_graph(
     dataset: List[Dict],
-    truncate: bool = False,
-    reverse: bool = False,
 ) -> nx.DiGraph:
 
     graph = nx.DiGraph()  # Directed graph
@@ -54,11 +52,6 @@ def make_math_guideline_graph(
         # Add a directed edge from drill_task_name1 to drill_task_name2 if result is "related"
         if result == "related":
             graph.add_edge(drill_task_name1, drill_task_name2)
-
-    if truncate:
-        graph = nx.transitive_reduction(graph)  # Remove redundant edges
-    if reverse:
-        graph = graph.reverse()
 
     return graph
 

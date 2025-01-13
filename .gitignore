@@ -9,3 +9,8 @@ wandb/
 
 __pycache__/
 *.json
+
+!dataset/formatted/*.json
+
+human_discrete
+
