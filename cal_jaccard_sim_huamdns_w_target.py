@@ -23,14 +23,14 @@ for name in human_names:
         {**entry, "result": entry["annotations"][name]} for entry in human_dataset
     ]
 
-target_G = make_math_guideline_graph(target_dataset, truncated=True, data_type="human")
+target_G = make_math_guideline_graph(target_dataset, truncate=True, data_type="human")
 
 sim_list = []
 
 for name, dataset in dataset_table.items():
     graph1_dataset = dataset_table[name]
 
-    G1 = make_math_guideline_graph(graph1_dataset, truncated=True, data_type="human")
+    G1 = make_math_guideline_graph(graph1_dataset, truncate=True, data_type="human")
 
     sim = jaccard_similarity(G1, target_G)
     sim_list.append(sim)

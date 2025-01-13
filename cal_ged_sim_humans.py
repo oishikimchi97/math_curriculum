@@ -2,6 +2,7 @@ from itertools import combinations
 from pathlib import Path
 
 import networkx as nx
+
 from math_graph.graph.graph import make_math_guideline_graph
 from math_graph.utils import load_json
 
@@ -26,8 +27,8 @@ for name1, name2 in human_comb:
     graph1_dataset = dataset_table[name1]
     graph2_dataset = dataset_table[name2]
 
-    G1 = make_math_guideline_graph(graph1_dataset, truncated=True, data_type="human")
-    G2 = make_math_guideline_graph(graph2_dataset, truncated=True, data_type="human")
+    G1 = make_math_guideline_graph(graph1_dataset, truncate=True, data_type="human")
+    G2 = make_math_guideline_graph(graph2_dataset, truncate=True, data_type="human")
 
     ged = nx.graph_edit_distance(G1, G2)
     print(f"Graph edit distance between {name1} and {name2} is {ged}")
