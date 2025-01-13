@@ -1,0 +1,11 @@
+*.png
+jhs-math-problem/
+jhs-math-answer/
+output/
+prompt
+wandb/
+*.log
+*.pdf
+
+__pycache__/
+*.json

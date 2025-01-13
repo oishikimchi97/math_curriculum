@@ -1,0 +1,33 @@
+<div style="font-family: 'Noto Sans JP', sans-serif;">
+    <div style="background-color: #f9f9f9; border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
+        <h2 style="color: #2c3e50;">学習タスク1</h2>
+        <p><strong>学年または教科名:</strong> {school_name1} {grade_or_subject_name1}</p>
+        <p><strong>分野:</strong> {topic1}</p>
+        <p><strong>学習内容:</strong> {task_objective1}</p>
+        <p><strong>次のような知識及び技能を身に付けること:</strong></p>
+        <p>{knowledge_and_skills1}</p>
+        <p><strong>次のような思考力,判断力,表現力等を身に付けること:</strong></p>
+        <p>{thinking_judgement_expression1}</p>
+        <p><strong>問題集例(ちびむすドリル)</strong></p>
+        <span style="color: red; font-weight: bold; background-color: #fff3cd; padding: 10px; border: 1px solid red; border-radius: 5px; margin: 10px 0; display: inline-block;">
+        ⚠️ 注意: クリックしても，移動されないため、CtrlかCmdを押しながら，クリックしてください。
+        </span>
+        <p>{linked_drill_tasks1}</p>
+    </div>
+
+    <div style="background-color: #f9f9f9; border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
+        <h2 style="color: #2c3e50;">学習タスク2</h2>
+        <p><strong>学年または教科名:</strong> {school_name2} {grade_or_subject_name2}</p>
+        <p><strong>分野:</strong> {topic2}</p>
+        <p><strong>学習内容:</strong> {task_objective2}</p>
+        <p><strong>次のような知識及び技能を身に付けること:</strong></p>
+        <p>{knowledge_and_skills2}</p>
+        <p><strong>次のような思考力,判断力,表現力等を身に付けること:</strong></p>
+        <p>{thinking_judgement_expression2}</p>
+        <p><strong>問題集例 (ちびむすドリル)</strong></p>
+        <span style="color: red; font-weight: bold; background-color: #fff3cd; padding: 10px; border: 1px solid red; border-radius: 5px; margin: 10px 0; display: inline-block;">
+        ⚠️ 注意: クリックしても，移動されないため、CtrlかCmdを押しながら，クリックしてください。
+        </span>
+        <p>{linked_drill_tasks2}</p>
+    </div>
+</div>

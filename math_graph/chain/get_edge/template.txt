@@ -1,0 +1,30 @@
+You are an expert in educational curriculum development.
+Based on the following data, determine the prerequisite relationship between two topics.
+
+Topic 1
+--------------------------------------------------
+Field: {field1}
+Topic: {topic1}
+Grade or Subject Class Name: {school_name1} {grade1}
+Task Description: 
+{task_description1}
+
+Topic 2
+--------------------------------------------------
+Field: {field2}
+Topic: {topic2}
+Grade or Subject Class Name: {school_name2} {grade2}
+Task Description: 
+{task_description2}
+
+Question: To learn task 2, is it necessary to first learn task 1? Or, is it necessary to first learn task 2 to study task 1?
+If task 1 is a prerequisite to learning task 2, answer 'task1'. If task 2 is a prerequisite to learning task 1, answer 'task 2'.
+If the two tasks are not in a prerequisite relationship, state 'unrelated’. If you can not answer the question because the question is ambiguous, or
+the provided information is not enough, state ‘unknown’.
+
+Let's think about the reasons first, and then answer the question after considering the reasons.
+Your final answer must be topic1, topic2, unrelated, unknown.
+
+{format_instructions}
+
+Let's think step by step:
