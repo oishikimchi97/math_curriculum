@@ -28,12 +28,12 @@ target_G = make_math_guideline_graph(target_dataset, truncate=True, data_type="h
 sim_list = []
 
 for name, dataset in dataset_table.items():
+    print(f"Calculating Jaccard similarity between {name} and target")
     graph1_dataset = dataset_table[name]
 
     G1 = make_math_guideline_graph(graph1_dataset, truncate=True, data_type="human")
 
     sim = jaccard_similarity(G1, target_G)
     sim_list.append(sim)
-    print(f"Jaccard similarity between {name} and target is {sim}")
 
 print(f"Average Jaccard similarity is {sum(sim_list) / len(sim_list)}")

@@ -25,6 +25,7 @@ human_comb = combinations(human_names, 2)
 sim_list = []
 
 for name1, name2 in human_comb:
+    print(f"Calculating Jaccard similarity between {name1} and {name2}")
     graph1_dataset = dataset_table[name1]
     graph2_dataset = dataset_table[name2]
 
@@ -33,6 +34,5 @@ for name1, name2 in human_comb:
 
     similarity = jaccard_similarity(G1, G2)
     sim_list.append(similarity)
-    print(f"Jaccard similarity between {name1} and {name2} is {similarity}")
 
 print(f"Average Jaccard similarity is {sum(sim_list) / len(sim_list)}")
