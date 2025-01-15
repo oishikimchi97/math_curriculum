@@ -10,7 +10,9 @@ def jaccard_similarity(G1, G2):
     num_union = len(union)
     similarity = len(intersection) / len(union) if len(union) > 0 else 0
 
-    print("Intersection: ", num_intersection)
-    print("Union: ", num_union)
-    print("Jaccard similarity: ", similarity)
-    return similarity
+    result_dict = {
+        "intersection": num_intersection,
+        "union": num_union,
+        "similarity": similarity,
+    }
+    return result_dict
