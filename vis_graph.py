@@ -8,6 +8,13 @@ import numpy as np
 
 from math_graph.graph.graph import make_math_guideline_graph
 
+COLOR_MAP = {
+    "関数": (0.55, 0.82, 0.78, 1.0),
+    "数と式": (0.50, 0.69, 0.82, 1.0),
+    "データの活用": (0.9568627451, 0.1529411765, 0.1529411765, 0.8),
+    "図形": (1.0, 0.92, 0.43, 1.0),
+}
+
 
 def visualize_math_graph(data_path):
     data_name = data_path.stem
@@ -37,17 +44,13 @@ def visualize_math_graph(data_path):
     topics = set(graph.nodes[node]["topic"] for node in graph.nodes)
 
     # Create a color map for the topics
-    color_map = {}
     colors = plt.cm.get_cmap(
         "Set3", len(topics)
     )  # Use a colormap with enough unique colors
 
-    for i, topic in enumerate(topics):
-        color_map[topic] = colors(i)
-
     # Assign colors to nodes based on their topic
     node_colors = [
-        color_map[graph.nodes[node].get("topic", None)] for node in graph.nodes
+        COLOR_MAP[graph.nodes[node].get("topic", None)] for node in graph.nodes
     ]
 
     plt.figure(figsize=(16, 16))
@@ -74,7 +77,7 @@ def visualize_math_graph(data_path):
             [0],
             marker="o",
             color="w",
-            markerfacecolor=color_map[topic],
+            markerfacecolor=COLOR_MAP[topic],
             markersize=10,
             label=topic,
         )

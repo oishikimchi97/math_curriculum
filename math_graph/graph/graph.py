@@ -1,3 +1,4 @@
+import string
 from typing import Dict, List, Literal
 
 import networkx as nx
@@ -42,6 +43,12 @@ def make_math_guideline_graph(
         drill_task_name2 = entry["data"][1]["drill_task_name"]
         drill_task_topic1 = entry["data"][0]["topic"]
         drill_task_topic2 = entry["data"][1]["topic"]
+
+        if drill_task_topic1[0] in string.ascii_uppercase:
+            drill_task_topic1 = drill_task_topic1[1:]
+        if drill_task_topic2[0] in string.ascii_uppercase:
+            drill_task_topic2 = drill_task_topic2[1:]
+
         result = entry["result"].lower()
 
         if drill_task_name1 not in graph:
