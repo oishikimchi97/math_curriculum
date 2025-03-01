@@ -3,6 +3,31 @@ from typing import Dict, List, Literal
 
 import networkx as nx
 
+node_readable_table = {
+    "平方の定理": "平方の定理",
+    "円の性質": "円の性質",
+    "対称と合同": "対称と合同",
+    "平面図形と合同": "平面図形と\n合同",
+    "平面図形": "平面図形",
+    "空間図形": "空間図形",
+    "2次関数": "2次関数",
+    "平方根": "平方根",
+    "式の展開と因数分解": "式の展開と\n因数分解",
+    "1次関数": "1次関数",
+    "比例と反比例": "比例と\n反比例",
+    "文字と式": "文字と式",
+    "方程式": "方程式",
+    "式の計算": "式の計算",
+    "立方野程": "立方野程",
+    "不確定な事象の確率": "不確定な\n事象の確率",
+    "確率（資料の活用）": "確率\n（資料の活用)",
+    "資料の整理と活用": "資料の\n整理と活用",
+    "データの活用": "データの活用",
+    "基本調査": "基本調査",
+    "標本調査": "標本調査",
+    "正負の数": "正負の数",
+}
+
 
 def get_single_path(graph, source, target):
     try:
@@ -34,6 +59,7 @@ def get_longest_path_length(graph, edges):
 
 def make_math_guideline_graph(
     dataset: List[Dict],
+    convert_readable: bool = False,
 ) -> nx.DiGraph:
 
     graph = nx.DiGraph()  # Directed graph
@@ -48,6 +74,14 @@ def make_math_guideline_graph(
             drill_task_topic1 = drill_task_topic1[1:]
         if drill_task_topic2[0] in string.ascii_uppercase:
             drill_task_topic2 = drill_task_topic2[1:]
+
+        if convert_readable:
+            drill_task_name1 = node_readable_table.get(
+                drill_task_name1, drill_task_name1
+            )
+            drill_task_name2 = node_readable_table.get(
+                drill_task_name2, drill_task_name2
+            )
 
         result = entry["result"].lower()
 

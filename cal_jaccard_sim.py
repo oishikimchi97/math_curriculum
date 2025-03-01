@@ -7,7 +7,7 @@ from math_graph.graph.graph import make_math_guideline_graph
 from math_graph.graph.sim import jaccard_similarity
 from math_graph.utils import load_json
 
-data_dir = Path("dataset/formatted")
+data_dir = Path("dataset/simplified_formatted_paper_name")
 data_paths = list(data_dir.glob("*.json"))
 
 pair_data_fps = combinations(data_paths, 2)

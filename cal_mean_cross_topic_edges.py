@@ -2,7 +2,7 @@ import json
 
 import networkx as nx
 
-data_path = "./gpt_v2_simplified.json"
+data_path = "dataset/simplified_formatted/Human Shimomura.json"
 
 with open(data_path, "r") as f:
     dataset = json.load(f)
@@ -22,7 +22,7 @@ for entry in dataset:
     topic_list.add(drill_task_topic2)
 
     if "result" in entry:
-        result = entry["result"]
+        result = entry["result"].lower()
     elif "annotation" in entry:
         result = entry["annotation"]["answer"].lower()
     if drill_task_name1 not in G:

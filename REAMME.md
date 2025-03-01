@@ -1,0 +1,2 @@
+This is the repository for “Discrepancy Between Humans and LVLMs in Directed Graph Annotations of Learning Sequences: A Case Study on the Middle School Mathematics Curriculum” from JSAI2025.
+The code and data used in the experiments will be released in this repository at a later date.

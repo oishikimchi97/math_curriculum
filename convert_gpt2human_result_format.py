@@ -8,7 +8,7 @@ def load_json(file_path):
     return data
 
 
-human_data_path = Path("dataset/base/llm_gpt_simple_label_updated.json")
+human_data_path = Path("dataset/base/gpt_v2.json")
 output_dir = Path("./dataset/formatted")
 
 output_dir.mkdir(parents=True, exist_ok=True)

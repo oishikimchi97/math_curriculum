@@ -9,9 +9,7 @@ def load_json(file_path):
     return data
 
 
-human_data_path = Path(
-    "./dataset/extracted_human/integrated_data-Kojima_Kim_Simomura_simplified-Simomura.json"
-)
+human_data_path = Path("dataset/base/integrated_data-Kojima_Kim_Simomura_discrete.json")
 output_dir = Path("./dataset/formatted")
 
 output_dir.mkdir(parents=True, exist_ok=True)
