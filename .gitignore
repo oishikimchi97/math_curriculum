@@ -9,6 +9,7 @@ wandb/
 
 __pycache__/
 *.json
+!visualization_paper/*
 
 !dataset/simplified_formatted_paper_name/*
 !dataset/label_studio/*
