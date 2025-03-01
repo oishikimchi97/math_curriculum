@@ -2,7 +2,7 @@ import json
 
 import networkx as nx
 
-data_path = "dataset/simplified_formatted/Human Shimomura.json"
+data_path = "dataset/simplified_formatted_paper_name/gpt4o.json"
 
 with open(data_path, "r") as f:
     dataset = json.load(f)

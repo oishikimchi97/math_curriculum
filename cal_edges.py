@@ -4,7 +4,6 @@ from pathlib import Path
 import japanize_matplotlib
 import matplotlib.pyplot as plt
 import networkx as nx
-import numpy as np
 
 from math_graph.graph.graph import make_math_guideline_graph
 
@@ -25,6 +24,6 @@ def cal_edge(data_path):
     print(f"{data_name}: {mean_edges_per_node * 2:.2f} mean edges per node")
 
 
-data_dir = Path("dataset/simplified_formatted")
+data_dir = Path("dataset/simplified_formatted_paper_name")
 for data_path in data_dir.glob("*.json"):
     cal_edge(data_path)

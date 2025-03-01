@@ -28,7 +28,7 @@ def print_statistics(result_counts):
 
 
 if __name__ == "__main__":
-    file_path = Path("dataset/formatted/Human continuous.json")
+    file_path = Path("dataset/simplified_formatted_paper_name/gpt4o.json")
     data = load_json(file_path)
     result_counts = count_results(data)
     print_statistics(result_counts)
