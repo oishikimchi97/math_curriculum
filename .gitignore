@@ -10,7 +10,7 @@ wandb/
 __pycache__/
 *.json
 
-!dataset/formatted/*.json
-
+!dataset/simplified_formatted_paper_name/*
+!dataset/label_studio/*
 human_discrete
 

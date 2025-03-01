@@ -1,0 +1,18 @@
+<View>
+  <Header value="以下の説明に基づいて、2つの数学学習タスクの間の依存関係を判断してください"/>
+  <HyperText name="text" value="$html_text_description" clickableLinks="true"/>
+    <View style="box-shadow: 2px 2px 5px #999; padding: 20px; margin-top: 2em; border-radius: 5px;">
+    <Header value="学習タスク1が学習タスク2の先行科目であるか答えてください。"/>
+    <Choices name="answer" toName="text" choice="single" showInLine="true">
+      <Choice value="High required" hint="学習タスク1が学習タスク2の直接な先行科目である" alias="high"/>
+      <Choice value="Low required" hint="学習タスク1が学習タスク2の間接的な先行科目である" alias="low"/>
+      <Choice value="Not required" hint="学習タスク1と学習タスク2がお互いに関係ない" alias="unrelated"/>
+      <Choice value="Unknown" hint="この説明だけでは判断することが難しい" alias="unknown"/>
+      <Choice value="Wrong" hint="タスクの説明文に問題が存在" alias="wrong"/>
+    </Choices>
+    <Header value="'unknown'を選択した時，理由があれば書いてください" size="5"/>>
+    <TextArea name="inquirement" toName="text"></TextArea>
+  </View>
+</View><!-- {
+  "data": {"text": "This is a great 3D movie that delivers everything almost right in your face."}
+} -->
